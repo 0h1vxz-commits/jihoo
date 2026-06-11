@@ -67,7 +67,7 @@ if prompt := st.chat_input("예: '다음 주 국어 수행평가 마감일이 �
             # 이어지는 대화 시작
             chat = model.start_chat(history=formatted_history)
             
-            # AI 답변 생성 (스트리밍 효과 적용으로 더 자연스럽게)
+            # AI 답변 생성
             with st.spinner("답변을 생각하고 있어요..."):
                 response = chat.send_message(prompt)
                 full_response = response.text
@@ -79,6 +79,5 @@ if prompt := st.chat_input("예: '다음 주 국어 수행평가 마감일이 �
             
         except Exception as e:
             error_msg = f"❌ 답변을 생성하는 중에 오류가 발생했습니다: {e}\n잠시 후 다시 시도해 주세요."
-            message_placeholder.markdown(error_msg)
-            streamlit>=1.30.0
+            message_placeholder.markdown(error_msg)streamlit>=1.30.0
 google-generativeai>=0.8.0
