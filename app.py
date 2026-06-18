@@ -80,5 +80,4 @@ if prompt := st.chat_input("예: '다음 주 국어 수행평가 마감일이 �
         except Exception as e:
             error_msg = f"❌ 답변을 생성하는 중에 오류가 발생했습니다: {e}\n잠시 후 다시 시도해 주세요."
             message_placeholder.markdown(error_msg)
-streamlit>=1.30.0
-google-generativeai>=0.8.0
+            google-generativeai>=0.8.0
